@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 15px 20px;
+    color: white;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background-color: white;
+    padding: 5px 10px;
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 20px;
+  }
+  
+  .search-bar .search-icon {
+    color: black;
+  }
+  
+  .logo img {
+    max-height: 50px;
+  }
+  
+  .account-cart a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  .separator-line {
+    width: 100%;
+    height: 1px;
+    background-color: grey;
+  }
+  
+  .menu-bar {
+    background-color: black;
+    padding: 05px 0;
+    text-align: center;
+  }
+  
+  .menu-bar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .menu-bar ul li {
+    position: relative;
+  }
+  
+  .menu-bar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .menu-bar ul li:hover a {
+    color: white;
+    background-color: black;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    text-underline-offset: 40x;
+    text-decoration-color: white; /* Sets the underline color to white */
+  }
+  .hero-image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+  .scent-steals-row {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between; /* Space between the two elements */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Add some padding */
+    color: white; /* Text color */
+}
+
+.scent-steals-title {
+    margin: 0; /* Remove default margin */
+    font-size: 30px;
+    font-weight: 700; /* Set font weight to 700 */
+    text-align: left !important;
+    color: black; /* Change text color to black */
+}
+
+.view-all a {
+    color: black; /* Change link color to black */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Add some padding */
+    text-decoration: underline;
+    text-underline-offset: 40x;
+    font-weight: 700;
+}
+
+.view-all a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+.product-row {
+    display: flex; /* Use flexbox to arrange products in a row */
+    justify-content: space-between; /* Space between products */
+    padding: 20px; /* Add padding */
+}
+
+.product {
+    background-color: white; /* Product background color */
+    padding: 15px; /* Padding around the product */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text */
+    width: 18%; /* Width of each product */
+}
+
+.product img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.price {
+    color: red; /* Price color */
+}
+
+.image-row {
+    margin-bottom: 20px;
+    display: flex; /* Use flexbox to arrange images in a row */
+    justify-content: space-between; /* Space between images */
+    margin-top: 20px; /* Margin on top */
+}
+
+.image-container {
+    position: relative; /* For positioning text over image */
+    width: 23%; /* Width of each image container */
+    padding-top: 20%; /* Maintain aspect ratio for circular shape */
+    border-radius: 50%; /* Make images circular */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    transition: transform 0.5s; /* Transition effect */
+    display: flex; /* Flexbox for centering the image */
+    align-items: center; /* Center image vertically */
+    justify-content: center; /* Center image horizontally */
+}
+
+.image-container img {
+    position: absolute; /* Position absolute for proper scaling */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Make images responsive */
+    height: 100%; /* Ensure height is full */
+    object-fit: cover; /* Cover the area without distortion */
+    transition: opacity 0.5s; /* Fade effect */
+}
+
+.image-container:hover img {
+    opacity: 0.7; /* Fade effect on hover */
+}
+
+.image-label {
+    position: relative; /* Changed to relative positioning */
+    top: 10px; /* Position from the bottom */
+    left: 50%; /* Center text horizontally */
+    transform: translateX(-50%); /* Center adjustment */
+    color: black; /* Text color */
+    font-weight: bold; /* Bold text */
+    margin-top: 5px; /* Margin above the label for spacing */
+    margin-bottom: 20px; /* Margin below the label */
+    text-align: center; /* Center text alignment */
+}
+
+.gallery {
+    margin-bottom: 20px;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 15px; /* Space between images */
+}
+
+.image-item {
+    position: relative; /* Position relative for hover effect */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.image-item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease; /* Transition effect for hover */
+}
+
+.image-item:hover img {
+    transform: scale(1.1); /* Scale image on hover */
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--colorLargeImageBg);
+    color: #fff;
+    padding: 20px;
+}
+
+.hero img {
+    width: 100%;
+    border-radius: 15px; /* Adjust radius as needed */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    right: 20px; /* Adjust as necessary */
+    transform: translateY(-50%);
+    background-color: black; /* Right side background */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners for content box */
+}
+
+.hero-content h2 {
+    font-size: 24px; /* Adjust size as needed */
+    margin: 0;
+    color: white;
+    text-align: center; /* Center the text */
+}
+
+.hero-content .btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-content .btn:hover {
+    background-color: lightgray; /* Change color on hover */
+}
+.badge-container {
+    display: flex;
+    justify-content: center; /* Center badges */
+    margin: 20px 0; /* Space above and below the badges */
+}
+
+.badge {
+    flex: 1; /* Each badge takes equal width */
+    margin: 0 10px; /* Space between badges */
+    padding: 20px;
+    text-align: center; /* Center align text */
+}
+
+.badge h3 {
+    font-size: 24px; /* Increased heading size */
+    color: #333; /* Dark text color */
+    margin-bottom: 10px; /* Space between title and text */
+}
+
+.badge p {
+    font-size: 16px; /* Slightly larger font size */
+    color: #666; /* Slightly lighter text color */
+}
+
+.badge-icon {
+    width: 50px; /* Set width for icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between icon and title */
+}
+.retail-outlets-section {
+    display: flex;
+    align-items: center;
+    background: url('https://www.transparenttextures.com/patterns/white-linen.png'); /* Texture background */
+    padding: 20px;
+}
+
+.retail-image {
+    width: 50%;
+    border-radius: 15px; /* Optional: round edges */
+}
+
+.retail-text {
+    margin-left: 20px;
+    color: #333; /* Text color */
+}
+
+.retail-text h2 {
+    font-size: 24px; /* Increased heading size */
+    margin-bottom: 10px;
+}
+
+.retail-text p {
+    font-size: 16px; /* Adjust paragraph font size */
+    line-height: 1.5; /* Improve readability */
+}
+
+
+.article {
+    max-width: 100%; /* Full width */
+    background: white; /* White background */
+    padding: 20px;
+    box-shadow: none; /* Remove shadow for simplicity */
+}
+
+h1, h2, h3 {
+    text-align: left; /* Align headings to the left */
+    margin-bottom: 10px; /* Space below headings */
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-top: 0; /* No margin at the top */
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px; /* Space above h2 */
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 15px; /* Space above h3 */
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify; /* Keep text justified */
+}
+
+ol, ul {
+    margin: 10px 0 20px 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+.row {
+    display: flex; /* Use flexbox to create a row layout */
+    justify-content: center; /* Center columns */
+    align-items: flex-start; /* Align items at the start of the row */
+    gap: 20px; /* Space between columns */
+    padding: 20px; /* Space around the row */
+}
+
+.column {
+    text-align: center; /* Center text in columns */
+    max-width: 100%; /* Limit width of each column */
+    padding: 15px; /* Inner padding */
+}
+
+.app-icon {
+    max-width: 50%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below the image */
+}
+.product-catalogue {
+    background-color: black; /* Black background */
+    text-align: center; /* Center align text */
+    padding: 50px 0; /* Padding for spacing */
+}
+
+.catalogue-title {
+    color: white; /* White color for title */
+    margin-bottom: 20px; /* Space below title */
+    font-size: 24px; /* Increased font size for title */
+    text-align: center;
+}
+
+.catalogue-button {
+    display: inline-block;
+    padding: 20px 50px; /* Adjust padding as needed */
+    border-radius: 40px; /* Make the button round */
+    color: black; /* Text color for active state */
+    background: white; /* Background color for active state */
+    font-size: 16px; /* Adjust font size */
+    transition: background 0.3s, color 0.3s; /* Smooth transition */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.catalogue-button:hover {
+    background: red; /* Change background to red on hover */
+    color: white; /* Change text color to white on hover */
+}
+
+
+
+.subscribe-bar {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align content */
+    align-items: center; /* Vertically center align */
+    padding: 20px; /* Add padding */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.subscribe-bar strong {
+    margin-right: 20px; /* Space between text and input */
+    font-size: 18px; /* Font size for text */
+}
+
+.email-input {
+    padding: 10px; /* Padding for the input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 16px; /* Font size */
+    width: 250px; /* Set a width for the email input */
+}
+
+.subscribe-button {
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 4px; /* Slightly rounded corners */
+    color: white; /* Text color */
+    background-color: red; /* Red background */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition */
+    margin-left: 10px; /* Space between input and button */
+}
+
+.subscribe-button:hover {
+    background-color: darkred; /* Darken button on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+.footer {
+            background-color: #000;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 5px; /* Added bottom space for the footer */
+        }
+        .footer img {
+            max-width: 100%;
+        }
+        .footer h4 {
+            font-weight: bold;
+            color: #f9f9f9;
+            font-weight: 700;
+            margin-bottom: 25px; /* Add space below headings */
+            line-height: 1; /* Increased line height for headings */
+        }
+        .footer a {
+            color: #fff;
+            font-weight: 200;
+            text-decoration: none;
+            margin-bottom: 2px; /* Space between links */
+            display: block; /* Make links block elements for spacing */
+            line-height: 1; /* Adjust line height for links */
+        }
+        .social-icons a {
+            margin-right: 10px;
+            color: #fff;
+            display: inline-block; /* Ensure social icons are inline */
+        }
+        .payment-icons img {
+            width: 40px; /* Adjust size if necessary */
+            margin-right: 10px; /* Space between payment icons */
+        }
+        .footer-column {
+            margin: 10px; /* Space between footer columns */
+            margin-bottom: 5px; /* Added bottom space for each column */
+        }
